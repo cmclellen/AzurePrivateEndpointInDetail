@@ -102,7 +102,7 @@ Remember, this resolution is now from **within** the private network. The CNAME 
         ttl = 9
 ```
 
-Refer to [Accessed from within the VNet](accessed-from-within-the-vnet)
+Refer to [Accessed from within the VNet](#accessed-from-within-the-vnet)
 
 ## Glossary
 
