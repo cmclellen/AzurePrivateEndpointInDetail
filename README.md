@@ -2,8 +2,9 @@
 
 ## Service endpoint vs. private endpoint
 ### Service endpoint
-* Enabled access to Azure services over the MS backbone network.
+* Enabled access to Azure services over the MS Azure backbone network, providing optimal routing for Azure traffic. It takes service traffic directly from your VNet to the service on the MS Azure backbone network.
 * A service endpoint remains a publicly routable IP address.
+* Endpoints are enabled on subnets configured in Azure virtual networks. Endpoints **can't** be used for traffic from your on-premises services to Azure services, so that traffic would still have to traverse the internet.
 
 ### Private endpoint
 * Enable access to specific Azure resources over a private IP address.
