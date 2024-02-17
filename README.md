@@ -2,7 +2,7 @@
 
 ## Service endpoint vs. private endpoint
 ### Service endpoint
-* Enabled access to Azure services over the **public** MS backbone network.
+* Enabled access to Azure services over the MS backbone network.
 * A service endpoint remains a publicly routable IP address.
 
 ### Private endpoint
