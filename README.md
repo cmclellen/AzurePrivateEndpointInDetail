@@ -26,7 +26,7 @@ With the VM deployment, a couple extra resources are provisioned:
 1. NSG: Tied to the NIC
 
 ### Findings
-1. Ran the command `nslookup stmypedevaue.blob.core.windows.net` and it yielded the public IP `20.38.113.100` of the Blob service
+1. Ran the command `nslookup -debug stmypedevaue.blob.core.windows.net` and it yielded the public IP `20.38.113.100` of the Blob service
 ```
     ->  stmypedevaue.blob.core.windows.net
         canonical name = blob.syd27prdstr01a.store.core.windows.net.
@@ -92,7 +92,7 @@ Remember, this resolution is now from **within** the private network. The CNAME 
 
 ![alt text](assets/images/public_network_access_disabled.png)
 
-1. So now when we run the same command as in the above scenario `nslookup stmypedevaue.blob.core.windows.net`, it yields the private IP `10.0.0.5` of the private endpoint. Notice the resolution to the CNAME `stmypedevaue.privatelink.blob.core.windows.net`
+1. So now when we run the same command as in the above scenario `nslookup -debug stmypedevaue.blob.core.windows.net`, it yields the private IP `10.0.0.5` of the private endpoint. Notice the resolution to the CNAME `stmypedevaue.privatelink.blob.core.windows.net`
 ```
     ->  stmypedevaue.blob.core.windows.net
         canonical name = stmypedevaue.privatelink.blob.core.windows.net.
