@@ -72,6 +72,7 @@ With the PE deployment, a couple extra resources are provisioned:
         internet address = 20.38.113.100
         ttl = 10 (10 secs)
 ```
+![MS Public DNS](assets/images/ms_public_dns.png)
 
 In the MS public DNS zone, `stmypedevaue.blob.core.windows.net` is a CNAME now pointing to `stmypedevaue.privatelink.blob.core.windows.net`, but because the private DNS zone isn't accessble from the internet, it resolves it using the MS public DNS zone which has it configured with the public IP of the Blob service (via CNAME and A record resolution).
 
@@ -86,6 +87,7 @@ In the MS public DNS zone, `stmypedevaue.blob.core.windows.net` is a CNAME now p
         internet address = 10.0.0.5
         ttl = 9
 ```
+![From within VNet](assets/images/from_within_vnet.png)
 
 Remember, this resolution is now from **within** the private network. The CNAME record for `stmypedevaue.blob.core.windows.net` (in the MS public DNS zone) now points to the private link child zone `stmypedevaue.privatelink.blob.core.windows.net`. Because the request originated from within the VNet, the private DNS zone is accessible and so the private IP of the private endpoint of the Blob service is resolved.
 
