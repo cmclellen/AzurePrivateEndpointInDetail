@@ -72,6 +72,7 @@ With the PE deployment, a couple extra resources are provisioned:
         internet address = 20.38.113.100
         ttl = 10 (10 secs)
 ```
+![MS Public DNS](assets/images/ms_public_dns.png)
 
 In the MS public DNS zone, `stmypedevaue.blob.core.windows.net` is a CNAME now pointing to `stmypedevaue.privatelink.blob.core.windows.net`, but because the private DNS zone isn't accessble from the internet, it resolves it using the MS public DNS zone which has it configured with the public IP of the Blob service (via CNAME and A record resolution).
 
